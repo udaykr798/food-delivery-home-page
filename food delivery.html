@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<br lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+  <style>
+    body{
+      background-image: url(https://img.freepik.com/premium-vector/mobile-smartphone-with-food-delivery-app-order-food-online-modern-creative-data-graphic-design-application-flat-style-cartoon-illustration-vector_610956-200.jpg?w=826);
+    }
+    
+    
+  .form{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 300px;
+    color: red;
+    background-color: blue;
+    text-align: center;
+    margin-left: 640px;
+    margin-top: 30px; 
+    border-radius: 20px; 
+
+  }
+ button{
+    border-radius: 8px;
+    background-color: rgb(95, 160, 122);
+ }
+ .navbar{
+  line-height: 20px;
+  left: 300px;
+ }
+ ul{
+  margin-left: 100px;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+  font-size:xx-large;
+ }
+ li{
+  float: left;
+  padding: 30px;
+  color: red;
+  
+ }
+ li img{
+  width: 200px;
+  margin-right: 0;
+  position: absolute;
+ }
+  </style>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li> your ordered Food</li>
+        <li>offer</li>
+        <li>service</li>
+        <li>contact</li>
+        <li>about us</li>
+      </ul>
+    </div>
+    <div class="form">
+    <h1> Order your food</h1>
+    <input type="text" name="" id="fast" placeholder="enter fast food"/> <br></br>
+    <input type="text" name="" id="food" placeholder="enter type of food"/><br></br>
+    <input type="number" name="" id="quantity" placeholder="enter quantity of food"/><br></br>
+    <input type="text" name="" id="extra" placeholder="enter extra type of food"/><br></br>
+    <input type="text" name="" id="address" placeholder="enter delivery address"/><br></br>
+    <input type="text" name="" id="payment" placeholder="enter payment mode"/><br></br>
+    <button onclick='delivery()'> submit </button>
+    <button >&times;</button>
+   <p id="abd"></p> 
+  </div>
+   <script>
+     function delivery(){
+    let fast=document.getElementById("fast").value;
+    let food=document.getElementById("food").value;
+    let quantity=document.getElementById("quantity").value;
+    let extra=document.getElementById("extra").value;
+    let address=document.getElementById("address").value;
+    let payment=document.getElementById("payment").value;
+    
+    let FoodDetails={
+        foodFast:fast,
+        foodFood:food,
+        foodQuantity:quantity,
+        foodExtra:extra,
+        foodAddress:address,
+        foodPayment:payment,
+        deliveryDate:Date()
+
+    }
+    document.getElementById("abd").innerHTML= `your food delivery  ${FoodDetails.foodFast} and type of food ${FoodDetails.foodFood} and quantity ${FoodDetails.foodQuantity} and you Choose ${FoodDetails.foodExtra} and delivery Address ${FoodDetails.FoodAddress} and payment mode ${FoodDetails.foodPayment} will be delivered on ${FoodDetails.deliveryDate}`;
+     }
+   </script>
+  </body>
+</html>
